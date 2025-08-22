@@ -91,65 +91,115 @@ MSc Big Data Biology @ Cardiff University
     <tr>
       <th>Figure</th>
       <th>Script</th>
-      <th>Dependencies</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Figure 1</td>
-      <td></td>
-      <td></td>
+      <td>Figure 1 was generated using Microsoft Powerpoint following quality filtering. <br> See Overview of Genome Curation</td>
     </tr>
     <tr>
       <td>Figure 2</td>
-      <td></td>
-      <td></td>
+      <td><a href="https://github.com/shelleydan/Burkholderia_Dissertation/blob/main/RScripts/Figure_2_Metadata_Visualisations.R" target="_blank">Figure_2_Metadata_Visualisations.R</a></td>
     </tr>
     <tr>
       <td>Figure 3</td>
-      <td></td>
-      <td></td>
+      <td><a href="https://github.com/shelleydan/Burkholderia_Dissertation/blob/main/RScripts/Figure_3_Full_Pairwise_Heatmap.R" target="_blank">Figure_3_Full_Pairwise_Heatmap.R</a></td>
     </tr>
     <tr>
       <td>Figure 4</td>
-      <td></td>
-      <td></td>
+      <td><a href="https://github.com/shelleydan/Burkholderia_Dissertation/blob/main/RScripts/Figure_4_Cenocepacia_Pairwise_Heatmap.R" target="_blank">Figure_4_Cenocepacia_Pairwise_Heatmap.R</a></td>
     </tr>
     <tr>
       <td>Figure 5</td>
-      <td></td>
-      <td></td>
+      <td><a href="https://github.com/shelleydan/Burkholderia_Dissertation/blob/main/RScripts/Figure_5_SNP_tree_with_Heatmaps.R" target="_blank">Figure_5_SNP_tree_with_Heatmaps.R</a></td>
     </tr>
     <tr>
       <td>Figure 6</td>
-      <td></td>
-      <td></td>
+      <td><a href="https://github.com/shelleydan/Burkholderia_Dissertation/blob/main/RScripts/Figure_6_Pangenome_SNP_Trees.R" target="_blank">Figure_6_Pangenome_SNP_Trees.R</a></td>
     </tr>
     <tr>
       <td>Figure 7</td>
-      <td></td>
-      <td></td>
+      <td><a href="https://github.com/shelleydan/Burkholderia_Dissertation/blob/main/RScripts/Figure_7_Clinical_%26_Env_Manhattan.R" target="_blank">Figure_7_Clinical_&_Env_Manhattan.R</a></td>
     </tr>
     <tr>
       <td>Figure 8</td>
-      <td></td>
-      <td></td>
+      <td><a href="https://github.com/shelleydan/Burkholderia_Dissertation/blob/main/RScripts/Figure_8_Clinical_%26_Env_Gene_Associations.R" target="_blank">Figure_8_Clinical_&_Env_Gene_Associations.R</a></td>
     </tr>
     <tr>
       <td>Figure 9</td>
-      <td></td>
-      <td></td>
+      <td><a href="https://github.com/shelleydan/Burkholderia_Dissertation/blob/main/RScripts/Figure_9_CF_Manhattan.R" target="_blank">Figure_9_CF_Manhattan.R</a></td>
     </tr>
     <tr>
       <td>Figure 10</td>
-      <td></td>
-      <td></td>
+      <td><a href="https://github.com/shelleydan/Burkholderia_Dissertation/blob/main/RScripts/Figure_10_CF_Gene_Association.R" target="_blank">Figure_10_CF_Gene_Association.R</a></td>
     </tr>
     <tr>
-      <td>Supplementary Fingure 1</td>
-      <td></td>
-      <td></td>
+      <td>Supplementary Figure 1</td>
+      <td><a href="https://github.com/shelleydan/Burkholderia_Dissertation/blob/main/RScripts/Sup_Figure_1_Sequence_Type_Distribution.R" target="_blank">Sup_Figure_1_Sequence_Type_Distribution.R</a></td>
+    </tr>
+    <tr>
+      <td>Supplementary Tables 1 & 2</td>
+      <td><a href="https://github.com/shelleydan/Burkholderia_Dissertation/blob/main/RScripts/Sup_Tables_Annotations.R" target="_blank">Sup_Tables_Annotations.R</a></td>
     </tr>
   </tbody>
 </table>
-# Package and Tool Versions
+
+# RStudio Session.info()
+```
+R version 4.3.2 (2023-10-31 ucrt)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 11 x64 (build 26100)
+
+Matrix products: default
+
+
+locale:
+[1] LC_COLLATE=English_United Kingdom.utf8  LC_CTYPE=English_United Kingdom.utf8   
+[3] LC_MONETARY=English_United Kingdom.utf8 LC_NUMERIC=C                           
+[5] LC_TIME=English_United Kingdom.utf8    
+
+time zone: Europe/London
+tzcode source: internal
+
+attached base packages:
+[1] grid      stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] phytools_2.4-4        maps_3.4.2.1          ape_5.8-1             Polychrome_1.3.1     
+ [5] cowplot_1.1.3         ggnewscale_0.5.0      ggtree_3.10.1         ComplexHeatmap_2.18.0
+ [9] ggrepel_0.9.6         ggpubr_0.6.0          data.table_1.16.4     lubridate_1.9.4      
+[13] forcats_1.0.0         stringr_1.5.1         dplyr_1.1.4           purrr_1.0.2          
+[17] readr_2.1.5           tidyr_1.3.1           tibble_3.2.1          ggplot2_3.5.1        
+[21] tidyverse_2.0.0      
+
+loaded via a namespace (and not attached):
+ [1] mnormt_2.1.1            phangorn_2.12.1         rlang_1.1.4            
+ [4] magrittr_2.0.3          clue_0.3-66             GetoptLong_1.0.5       
+ [7] matrixStats_1.5.0       compiler_4.3.2          png_0.1-8              
+[10] vctrs_0.6.5             combinat_0.0-8          quadprog_1.5-8         
+[13] pkgconfig_2.0.3         shape_1.4.6.1           crayon_1.5.3           
+[16] backports_1.5.0         tzdb_0.4.0              aplot_0.2.4            
+[19] clusterGeneration_1.3.8 jsonlite_2.0.0          broom_1.0.7            
+[22] parallel_4.3.2          cluster_2.1.4           R6_2.6.1               
+[25] stringi_1.8.7           RColorBrewer_1.1-3      car_3.1-3              
+[28] numDeriv_2016.8-1.1     Rcpp_1.0.13-1           iterators_1.0.14       
+[31] optimParallel_1.0-2     IRanges_2.36.0          Matrix_1.6-1.1         
+[34] igraph_2.1.4            timechange_0.3.0        tidyselect_1.2.1       
+[37] rstudioapi_0.17.1       abind_1.4-8             doParallel_1.0.17      
+[40] codetools_0.2-19        lattice_0.21-9          treeio_1.26.0          
+[43] withr_3.0.2             coda_0.19-4.1           gridGraphics_0.5-1     
+[46] circlize_0.4.16         pillar_1.10.1           carData_3.0-5          
+[49] foreach_1.5.2           stats4_4.3.2            ggfun_0.1.8            
+[52] generics_0.1.3          S4Vectors_0.40.2        hms_1.1.3              
+[55] munsell_0.5.1           scales_1.3.0            tidytree_0.4.6         
+[58] glue_1.8.0              scatterplot3d_0.3-44    lazyeval_0.2.2         
+[61] tools_4.3.2             ggsignif_0.6.4          fs_1.6.5               
+[64] fastmatch_1.1-6         colorspace_2.1-1        nlme_3.1-163           
+[67] patchwork_1.3.0         Formula_1.2-5           cli_3.6.3              
+[70] DEoptim_2.2-8           expm_1.0-0              gtable_0.3.6           
+[73] rstatix_0.7.2           yulab.utils_0.1.9       digest_0.6.37          
+[76] BiocGenerics_0.48.1     ggplotify_0.1.2         rjson_0.2.23           
+[79] farver_2.1.2            lifecycle_1.0.4         GlobalOptions_0.1.2    
+[82] MASS_7.3-60  
+```
