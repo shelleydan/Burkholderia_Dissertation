@@ -6,7 +6,6 @@ library(tidyr)
 library(ggrepel)
 library(Polychrome)
 library(ape)
-library(ggtreeExtra)
 library(tidyverse)
 
 # Read in Metadata

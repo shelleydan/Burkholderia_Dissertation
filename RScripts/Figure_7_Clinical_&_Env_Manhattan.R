@@ -2,7 +2,6 @@ library(data.table)
 library(ggplot2)
 library(dplyr)
 library(ggpubr)
-library(rtracklayer)
 library(tidyr)
 library(ggrepel)
 
