@@ -1,7 +1,15 @@
 # BIT104: Burkholderia Dissertation
 MSc Big Data Biology @ Cardiff University
+<br>
+#### This repository supports the analysis which contributes to a dissertation submission for BIT104 of MSc Big Data Biology at Cardiff University. This dissertation is titled: A comparative genomic interrogation of _Burkholderia cenocepacia_ as a cystic fibrosis lung pathogen  and rarely encountered environmental bacterium. Here, we aimed to indentify key associations of _B. cenocepacia_ with the environment and CF-derived strains. We reclassified the _B. cenocepacia_ databse to identify true _B. cenocepacia_ isolates. We identified that 37.6% of the database was misclassified. Approches used to analyse these genomes are outlines below with links to the relevant scripts used. Any scripts not self-curated are appropriately referenced in their relevant methods sections. 
 
-# Script Function
+# Overview of Genome Curation
+
+
+<img width="8865" height="4757" alt="Flowchart" src="https://github.com/user-attachments/assets/a4799682-0fe4-41c7-bad0-1547f214db9e" />
+
+
+# Script Summary
 
 <table>
   <thead>
@@ -53,7 +61,7 @@ MSc Big Data Biology @ Cardiff University
       <td>1.0.0</td>
     </tr>
     <tr>
-      <td><a href="https://github.com/shelleydan/Llyfrgell_Bersonol/blob/main/bin/bakta.sbatch" target="_blank">Bakta.sbatch</a></td>
+      <td><a href="https://github.com/shelleydan/Llyfrgell_Bersonol/blob/main/bin/bakta.sbatch" target="_blank">Bakta.sbatch</a>**</td>
       <td>Provide high quality annotations - used to confirm some ABRicate results</td>
       <td>1.11.3</td>
     </tr>
@@ -68,14 +76,80 @@ MSc Big Data Biology @ Cardiff University
       <td>Panaroo; 1.2.10 <br> Snippy; 4.6.0 <br> SNP-Sites; 2.5.1 <br> RAxML; 1.2.0</td>
     </tr>
     <tr>
-      <td><a href="https://github.com/shelleydan/Llyfrgell_Bersonol/blob/main/bin/microGWAS.sbatch" target="_blank">MicroGWAS.sbatch</a></td>
+      <td><a href="https://github.com/shelleydan/Llyfrgell_Bersonol/blob/main/bin/microGWAS.sbatch" target="_blank">MicroGWAS.sbatch</a>**</td>
       <td>Perform a Genome-Wide Association Study.</td>
       <td>0.6.0</td>
     </tr>
   </tbody>
 </table>
-
+** A Conda install of MicroGWAS and Bakta was used, information about the installation method can be found here: <a href="https://github.com/shelleydan/Llyfrgell_Bersonol/blob/main/conda/conda_module_HPC.txt" target="_blank">Conda HPC Module Install</a>
 
 # Figure & Table Curation
 
+<table>
+  <thead>
+    <tr>
+      <th>Figure</th>
+      <th>Script</th>
+      <th>Dependencies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Figure 1</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Figure 2</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Figure 3</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Figure 4</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Figure 5</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Figure 6</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Figure 7</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Figure 8</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Figure 9</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Figure 10</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Supplementary Fingure 1</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 # Package and Tool Versions
