@@ -8,7 +8,7 @@ library(ggrepel)
 theme_set(theme_bw())
 
 # Read in the Unitig data from microGWAS
-mappedregions <- read.table("C:/Users/Dan_PC/OneDrive - Cardiff University/002 - Cardiff University - Postgraduate/MSc Big Data Biology/BIT104_Dissertation/CHP2_GWAS/clinical/mapped_all.tsv",
+mappedregions <- read.table("C:/Users/Danie/OneDrive - Cardiff University/002 - Cardiff University - Postgraduate/MSc Big Data Biology/BIT104_Dissertation/CHP2_GWAS/clinical/mapped_all.tsv",
                             sep = "\t",
                             header = TRUE)
 
@@ -51,13 +51,13 @@ facet_labels <- c(
 ######## Prep Annotations
 
 # Read in significant genes
-AnnotationSum <- read.delim("C:/Users/Dan_PC/OneDrive - Cardiff University/002 - Cardiff University - Postgraduate/MSc Big Data Biology/BIT104_Dissertation/CHP2_GWAS/clinical/annotated_summary.tsv", 
+AnnotationSum <- read.delim("C:/Users/Danie/OneDrive - Cardiff University/002 - Cardiff University - Postgraduate/MSc Big Data Biology/BIT104_Dissertation/CHP2_GWAS/clinical/annotated_summary.tsv", 
                             sep = "\t",
                             header = TRUE,
                             quote = )
 
 # Read in conversion table to match annotations and unitigs
-SNP_Loci <- read.table("C:/Users/Dan_PC/OneDrive - Cardiff University/002 - Cardiff University - Postgraduate/MSc Big Data Biology/BIT104_Dissertation/CHP2_GWAS/cysticfibrosis/regions.tsv", 
+SNP_Loci <- read.table("C:/Users/Danie/OneDrive - Cardiff University/002 - Cardiff University - Postgraduate/MSc Big Data Biology/BIT104_Dissertation/CHP2_GWAS/cysticfibrosis/regions.tsv", 
                        sep = "\t",
                        header = FALSE)
 
@@ -99,6 +99,7 @@ FullManhatten <- ggplot(mappedregions, aes(x = pos, y = p_val_log, colour = colo
                                  "Significant_Clinical" = "cornflowerblue",
                                  "Significant_Environment" = "darkseagreen2"),
                       name = "Significance") +
+  theme(legend.position = "bottom") +
   geom_hline(yintercept = 7, 
              linetype = "dashed",
              color = "brown2",
@@ -110,9 +111,12 @@ FullManhatten <- ggplot(mappedregions, aes(x = pos, y = p_val_log, colour = colo
   scale_y_continuous(breaks = seq(0,30, by = 5),
                      expand = c(0, 0)) +
   coord_cartesian(ylim = c(0, 30)) +
-  facet_grid(~ contig, scales = "free_x",
-             labeller = labeller(contig = facet_labels))
-
+  facet_wrap(
+    ~ contig,
+    ncol = 2,
+    scales = "free_x",
+    labeller = labeller(contig = facet_labels)
+  )
 
 FullAnnMan <- FullManhatten +
   geom_point(
@@ -129,6 +133,11 @@ FullAnnMan <- FullManhatten +
                                "shell" = "orange",
                                "cloud" = "black"),
                     name = "Pangenome Category")
+
+ggsave("ManhattenClinicalWhole.png",
+       plot = FullAnnMan,
+       height = 15,
+       width = 15)
 
 ### Create Zoom
 
@@ -396,30 +405,18 @@ chr3_region1 <- region1 +
 
 #### ggarrange
 
-# Arrange Chromosome 2 Zoom ins
-middle_row <- ggarrange(chr2_region1, chr2_region2, chr2_region3, 
-                        labels = c("B", "C", "D"), 
-                        ncol = 3, 
-                        common.legend = FALSE, 
-                        legend = "none")
-
-# Arrange chromosome 1 and 3 zoom ins
-bottom_row <- ggarrange(chr1_region, chr3_region1, 
-                        labels = c("E", "F"), 
-                        ncol = 2, 
-                        common.legend = FALSE, 
-                        legend = "none")
-
-# Arrange all plots together
-final_plot <- ggarrange(FullAnnMan, middle_row, bottom_row,
-                        nrow = 3,
-                        labels = "A",
-                        common.legend = TRUE,
-                        legend = "bottom",
-                        heights = c(2,2,2))
-
+final_plot <- ggarrange(
+  chr1_region, chr2_region1,
+  chr2_region2, chr2_region3,  # adjust your plots
+  chr3_region1, NULL,          # 6th slot empty
+  ncol = 2, nrow = 3,
+  labels = c("A", "B", "C", "D", "E", ""),
+  common.legend = TRUE,
+  legend = "bottom",
+  heights = c(2, 2, 2)
+)
 
 ggsave("ManhattenClinical.png",
        plot = final_plot,
        height = 15,
-       width = 15)
+       width = 10)
